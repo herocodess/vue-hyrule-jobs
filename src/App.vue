@@ -1,16 +1,18 @@
 <template>
   <div class="app">
-    <p>{{jobs[0].title}}</p>
+    <JobsList :jobs="jobs"/>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent,  ref } from 'vue';
 import Job from './models/job';
+import JobsList from '@/components/JobsList.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
+    JobsList,
   },
   setup() {
      
@@ -26,19 +28,19 @@ export default defineComponent({
           title: "React Developer",
           location: "Onsite",
           salary: 30000,
-          id: '1'
+          id: '2'
         },  
         {
           title: "VueJs Developer",
           location: "Long Island",
           salary: 50000,
-          id: '1'
+          id: '3'
         },  
         {
           title: "NodeJs Developer",
           location: "Remote",
           salary: 50000,
-          id: '1'
+          id: '4'
         },  
       ])
 
